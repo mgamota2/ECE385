@@ -45,25 +45,27 @@ end
 // Everything happens sequentially inside an initial block
 // as in a software program
 initial begin: TEST_VECTORS
-Reset_Load_Clear = 0;		// Toggle Rest
-Run = 0;
+Reset_Load_Clear = 1;		// Toggle Rest
+Run = 1;
 
 SW = 8'hff;	// Specify Din, F, and R
 
-#20 Reset_Load_Clear = 1;
-
 #20 Reset_Load_Clear = 0;
+
+#20 Reset_Load_Clear = 1;
 
 SW = 8'hff;
 
-#2 Run = 1;	// Toggle Execute
-#2 Run =0;
+#2 Run = 0;	// Toggle Execute
+#40 Run =1;
 
-#30 SW = 8'h0ff;
+#30 SW = 8'hff;
 
-#10 Run=1;
-#2 Run=0;
+#10 Run=0;
+#2 Run=1;
 
+#40 Run=0;
+#2 Run=1;
 
 end
 endmodule

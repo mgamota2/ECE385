@@ -1,6 +1,5 @@
-//This code comes from Lab 2
+//Taken from Lab 2
 //These are synchronizers required for bringing asynchronous signals into the FPGA
-
 
 //synchronizer with no reset (for switches/buttons)
 module sync (

@@ -19,7 +19,9 @@ module mult_toplevel  (input logic Clk, Reset_Load_Clear, Run,
 );
 
 		// Declare temporary values used by other modules
-		//Switches
+		//Sync buttons and switches
+		logic Run_SH, RCL_SH;
+		logic [7:0]SW_S;
 		
 		
 		//X reg
@@ -52,24 +54,24 @@ module mult_toplevel  (input logic Clk, Reset_Load_Clear, Run,
 		end
 		
 		//Instantitate modules
-		control control_unit(.Clk(Clk), .Reset(Reset_Load_Clear), .Run(Run), 
+		control control_unit(.Clk(Clk), .Reset(RLC_SH), .Run(Run_SH), 
 								   .M_next(Bval[1]), .M_initial(Bval[0]), .counter(counter[2:0]), .Clr_Ld(Clr_Ld), 
 									.Shift(Shift), .Add(add),.Sub(sub));
 									
-		ripple_adder ALU(.SW(SW[7:0]), .A(Aval[7:0]), .add(add), .sub(sub), .S(A[7:0]), .X(x_in));
+		ripple_adder ALU(.SW(SW_S[7:0]), .A(Aval[7:0]), .add(add), .sub(sub), .S(A[7:0]), .X(x_in));
 		
-		x_reg x_unit(.Clk(Clk), .x_in(x_in), .clear(Reset_Load_Clear), .x_out(x_out));
+		x_reg x_unit(.Clk(Clk), .x_in(x_in), .clear(RLC_SH | (Run_SH && Clr_Ld && counter==3'b000)), .x_out(x_out));
 		
 							
-		reg_8 reg_A(.Clk(Clk), .Reset(Reset_Load_Clear), .Shift_In(x_out), .Load(add | sub), 
+		reg_8 reg_A(.Clk(Clk), .Reset(RLC_SH | (Run_SH && Clr_Ld && counter==3'b000)), .Shift_In(x_out), .Load(add | sub), 
 						.Shift_En(Shift), .D(A[7:0]), .Shift_Out(B_in), .Data_Out(Aval[7:0]));
 						
-		reg_8 reg_B(.Clk(Clk), .Reset(1'b0), .Shift_In(B_in), .Load(Reset_Load_Clear), 
-						.Shift_En(Shift), .D(SW[7:0]), .Shift_Out(M), .Data_Out(Bval[7:0]));
+		reg_8 reg_B(.Clk(Clk), .Reset(1'b0), .Shift_In(B_in), .Load(RLC_SH), 
+						.Shift_En(Shift), .D(SW_S[7:0]), .Shift_Out(M), .Data_Out(Bval[7:0]));
 						
 		
 									
-		counter counter_7(.Clk(Clk), .asynch_clr(Clr_Ld), .enable(Shift), .up_down(Shift),
+		counter counter_7(.Clk(Clk), .asynch_clr(Clr_Ld && ~Run_SH), .enable(Shift), .up_down(Shift),
 								.Q(counter[2:0]));
 
 
@@ -97,7 +99,9 @@ module mult_toplevel  (input logic Clk, Reset_Load_Clear, Run,
 		HexDriver		unused21 (
 								.In0(4'b0000),
 								.Out0(HEX5) );
-												
 		
+												
+		sync button_sync[1:0] (Clk, {~Reset_Load_Clear, ~Run}, {RLC_SH, Run_SH});
+	   sync SW_sync[7:0] (Clk, SW, SW_S);
 		
 endmodule

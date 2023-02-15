@@ -10,15 +10,15 @@ cModel Technology
 Z0 dC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/simulation/modelsim
 vcontrol
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1676444852
+Z2 !s110 1676484377
 !i10b 1
-!s100 RmiL0S^M4F2T>J3H>Jjm[1
-Il^6NL3zHP_EQzN=h<`h_B1
+!s100 >5VB4>Maa71jV9IY9:e[f1
+I[dGbRc2HbB5VVQ9QWT5[b3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 control_sv_unit
 S1
 R0
-w1676443803
+w1676483793
 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/control.sv
 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/control.sv
 L0 1
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1676444852.000000
+Z5 !s108 1676484376.000000
 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/control.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/control.sv|
 !i113 1
@@ -37,13 +37,13 @@ vcounter
 R1
 R2
 !i10b 1
-!s100 4;PTOYLYo9VF`VSB]4m271
-IkMg_f?h3iSH7^b???Sakk2
+!s100 a]`99G>6Fmj`9j`lN=`7B0
+IeYo7mV`:hW73e5J3AT[gk3
 R3
 !s105 counter_sv_unit
 S1
 R0
-w1676443810
+w1676482399
 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/counter.sv
 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/counter.sv
 L0 1
@@ -51,7 +51,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z9 !s108 1676484377.000000
 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/counter.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/counter.sv|
 !i113 1
@@ -60,25 +60,25 @@ R7
 R8
 vCRA_4bit
 R1
-R2
+Z10 !s110 1676484376
 !i10b 1
 !s100 VGfW0>hjz=<aUNC70QeO[0
 IR;kFfYXcoVQ]9kYVT]E8I0
 R3
-Z9 !s105 ripple_adder_sv_unit
+Z11 !s105 ripple_adder_sv_unit
 S1
 R0
-Z10 w1676439102
-Z11 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/ripple_adder.sv
-Z12 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/ripple_adder.sv
+Z12 w1676439102
+Z13 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/ripple_adder.sv
+Z14 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/ripple_adder.sv
 L0 31
 R4
 r1
 !s85 0
 31
 R5
-Z13 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/ripple_adder.sv|
-Z14 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/ripple_adder.sv|
+Z15 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/ripple_adder.sv|
+Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/ripple_adder.sv|
 !i113 1
 R6
 R7
@@ -86,32 +86,32 @@ R8
 n@c@r@a_4bit
 vfull_adder
 R1
-R2
+R10
 !i10b 1
 !s100 Sh;:4?EHROMkeQaG3jGTo2
 IF6mJYkDM`=AQLQQiam2kh2
 R3
-R9
+R11
 S1
 R0
-R10
-R11
 R12
+R13
+R14
 L0 49
 R4
 r1
 !s85 0
 31
 R5
-R13
-R14
+R15
+R16
 !i113 1
 R6
 R7
 R8
 vHexDriver
 R1
-R2
+R10
 !i10b 1
 !s100 @7:EV1nkVC8T9F9SP9Mj83
 I5JF08X4O5X;fR8SngB1Kk3
@@ -139,13 +139,13 @@ vmult_toplevel
 R1
 R2
 !i10b 1
-!s100 6mQf_4J]?T?f<Y^F;g[X_1
-I?W3IH^kGeJoG12WWFCWW_1
+!s100 DYCcF:8XBCG[[Z<6?J[Ga1
+I@dmUQ?YG6VCi>2j;cU02D1
 R3
 !s105 mult_toplevel_sv_unit
 S1
 R0
-w1676443813
+w1676484322
 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/mult_toplevel.sv
 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/mult_toplevel.sv
 L0 4
@@ -153,7 +153,7 @@ R4
 r1
 !s85 0
 31
-R5
+R9
 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/mult_toplevel.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/mult_toplevel.sv|
 !i113 1
@@ -162,7 +162,7 @@ R7
 R8
 vreg_8
 R1
-R2
+R10
 !i10b 1
 !s100 7P1QBa7<Dh4g^REko1LFo2
 IB2^gReDCFFOoOAHJoi4>n1
@@ -187,25 +187,100 @@ R7
 R8
 vripple_adder
 R1
-R2
+R10
 !i10b 1
 !s100 =48F33SVdT8ZiOC`j_i3<3
 Il1>O]zaVz3QCCmZT=S;GN3
 R3
-R9
+R11
 S1
 R0
-R10
-R11
 R12
+R13
+R14
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-R13
-R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vsync
+R1
+R2
+!i10b 1
+!s100 jml?F6?gBG?=F8=RK[?R^0
+I8IQMVo8`e::^IgMlK;j`40
+R3
+Z17 !s105 Synchronizers_sv_unit
+S1
+R0
+Z18 w1676480183
+Z19 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/Synchronizers.sv
+Z20 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/Synchronizers.sv
+L0 5
+R4
+r1
+!s85 0
+31
+R9
+Z21 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/Synchronizers.sv|
+Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/Synchronizers.sv|
+!i113 1
+R6
+R7
+R8
+vsync_r0
+R1
+R2
+!i10b 1
+!s100 bEYEA<R<^8m04gHnV^[F@0
+IlXRRV@gHK>;[6YWo7W:dc3
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 19
+R4
+r1
+!s85 0
+31
+R9
+R21
+R22
+!i113 1
+R6
+R7
+R8
+vsync_r1
+R1
+R2
+!i10b 1
+!s100 Hz450o]DO7VR93PXIK=ek3
+IFE8NM]6V8<0KAJ3mX:b7K0
+R3
+R17
+S1
+R0
+R18
+R19
+R20
+L0 40
+R4
+r1
+!s85 0
+31
+R9
+R21
+R22
 !i113 1
 R6
 R7
@@ -214,13 +289,13 @@ vtestbench
 R1
 R2
 !i10b 1
-!s100 GjL=1QD?9Yk1OoEbN?C2Q3
-I@1Vj2OocHLLkcZhl1kg@20
+!s100 QCF[<4K3^NC1^VNF4XiRl3
+I9Mc4>2S1;BCUYT_3bOg@01
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1676444819
+w1676483023
 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/testbench.sv
 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/testbench.sv
 L0 1
@@ -228,7 +303,7 @@ R4
 r1
 !s85 0
 31
-R5
+R9
 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/testbench.sv|
 !i113 1
@@ -253,7 +328,7 @@ R4
 r1
 !s85 0
 31
-R5
+R9
 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/X.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 4/Files/X.sv|
 !i113 1

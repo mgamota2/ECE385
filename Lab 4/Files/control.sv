@@ -25,10 +25,10 @@ module control(
 
             Clear_state :    
 				
-						if (Run && M_initial)
+						if (Run && M_initial && counter == 3'b000)
                        next_state = Add_state;
 							  
-						else if (Run && !M_initial)
+						else if (Run && !M_initial && counter == 3'b000)
 							  
 							  next_state = Shift_state;
 							  

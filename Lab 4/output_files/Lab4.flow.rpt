@@ -1,5 +1,5 @@
 Flow report for Lab4
-Wed Feb 15 01:07:24 2023
+Wed Feb 15 12:07:14 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,24 +40,24 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Feb 15 01:07:24 2023       ;
+; Flow Status                        ; Successful - Wed Feb 15 12:07:14 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab4                                        ;
 ; Top-level Entity Name              ; mult_toplevel                               ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 742                                         ;
-;     Total combinational functions  ; 526                                         ;
-;     Dedicated logic registers      ; 506                                         ;
-; Total registers                    ; 506                                         ;
-; Total pins                         ; 75                                          ;
+; Total logic elements               ; 731 / 49,760 ( 1 % )                        ;
+;     Total combinational functions  ; 538 / 49,760 ( 1 % )                        ;
+;     Dedicated logic registers      ; 516 / 49,760 ( 1 % )                        ;
+; Total registers                    ; 516                                         ;
+; Total pins                         ; 75 / 360 ( 21 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 1,280                                       ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total memory bits                  ; 1,280 / 1,677,312 ( < 1 % )                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/15/2023 01:07:02 ;
+; Start date & time ; 02/15/2023 12:06:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab4                ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+------------------------------------------------------------------------+---------------+---------------+------------------+
 ; Assignment Name                      ; Value                                                                  ; Default Value ; Entity Name   ; Section Id       ;
 +--------------------------------------+------------------------------------------------------------------------+---------------+---------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 4771258023320.167644482230220                                          ; --            ; --            ; --               ;
+; COMPILER_SIGNATURE_ID                ; 4771258023320.167648439003984                                          ; --            ; --            ; --               ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                     ; --            ; --            ; testbench        ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                                                              ; --            ; --            ; eda_simulation   ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                                                      ; --            ; --            ; eda_simulation   ;
@@ -86,7 +86,7 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; Files/testbench.sv                                                     ; --            ; --            ; testbench        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; testbench                                                              ; --            ; --            ; testbench        ;
 ; EDA_TEST_BENCH_NAME                  ; testbench                                                              ; --            ; --            ; eda_simulation   ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1500 ns                                                                ; --            ; --            ; testbench        ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 3000 ns                                                                ; --            ; --            ; testbench        ;
 ; EDA_TIME_SCALE                       ; 1 ps                                                                   ; --            ; --            ; eda_simulation   ;
 ; ENABLE_SIGNALTAP                     ; On                                                                     ; --            ; --            ; --               ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                                                     ; --            ; --            ; --               ;
@@ -138,8 +138,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4835 MB             ; 00:00:12                           ;
-; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:12                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4835 MB             ; 00:00:14                           ;
+; Fitter               ; 00:00:09     ; 1.1                     ; 5667 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4683 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4832 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4673 MB             ; 00:00:02                           ;
+; Total                ; 00:00:38     ; --                      ; --                  ; 00:00:26                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -149,6 +153,10 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-KOREEA8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-KOREEA8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-KOREEA8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-KOREEA8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-KOREEA8  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -156,6 +164,10 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
+quartus_fit --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
+quartus_asm --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
+quartus_sta Lab4 -c Lab4
+quartus_eda --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
 
 
 

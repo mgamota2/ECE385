@@ -1,15 +1,15 @@
 |mult_toplevel
 Clk => Clk.IN5
-Reset_Load_Clear => Reset_Load_Clear.IN4
-Run => Run.IN1
-SW[0] => SW[0].IN2
-SW[1] => SW[1].IN2
-SW[2] => SW[2].IN2
-SW[3] => SW[3].IN2
-SW[4] => SW[4].IN2
-SW[5] => SW[5].IN2
-SW[6] => SW[6].IN2
-SW[7] => SW[7].IN2
+Reset_Load_Clear => sync:button_sync[1].d
+Run => sync:button_sync[0].d
+SW[0] => sync:SW_sync[0].d
+SW[1] => sync:SW_sync[1].d
+SW[2] => sync:SW_sync[2].d
+SW[3] => sync:SW_sync[3].d
+SW[4] => sync:SW_sync[4].d
+SW[5] => sync:SW_sync[5].d
+SW[6] => sync:SW_sync[6].d
+SW[7] => sync:SW_sync[7].d
 Aval[0] <= Aval[0].DB_MAX_OUTPUT_PORT_TYPE
 Aval[1] <= Aval[1].DB_MAX_OUTPUT_PORT_TYPE
 Aval[2] <= Aval[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -90,12 +90,15 @@ M_next => always1.IN1
 counter[0] => LessThan0.IN6
 counter[0] => Equal0.IN2
 counter[0] => Equal1.IN2
+counter[0] => Equal2.IN2
 counter[1] => LessThan0.IN5
 counter[1] => Equal0.IN1
 counter[1] => Equal1.IN1
+counter[1] => Equal2.IN1
 counter[2] => LessThan0.IN4
 counter[2] => Equal0.IN0
 counter[2] => Equal1.IN0
+counter[2] => Equal2.IN0
 Clr_Ld <= Clr_Ld.DB_MAX_OUTPUT_PORT_TYPE
 Shift <= Shift.DB_MAX_OUTPUT_PORT_TYPE
 Add <= Add.DB_MAX_OUTPUT_PORT_TYPE
@@ -412,9 +415,7 @@ Clk => Q[2]~reg0.CLK
 asynch_clr => Q[0]~reg0.ACLR
 asynch_clr => Q[1]~reg0.ACLR
 asynch_clr => Q[2]~reg0.ACLR
-enable => Q[2]~reg0.ENA
-enable => Q[1]~reg0.ENA
-enable => Q[0]~reg0.ENA
+enable => always0.IN1
 up_down => Q.OUTPUTSELECT
 up_down => Q.OUTPUTSELECT
 up_down => Q.OUTPUTSELECT
@@ -505,5 +506,65 @@ Out0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 Out0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 Out0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 Out0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult_toplevel|sync:button_sync[0]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult_toplevel|sync:button_sync[1]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult_toplevel|sync:SW_sync[0]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult_toplevel|sync:SW_sync[1]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult_toplevel|sync:SW_sync[2]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult_toplevel|sync:SW_sync[3]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult_toplevel|sync:SW_sync[4]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult_toplevel|sync:SW_sync[5]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult_toplevel|sync:SW_sync[6]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult_toplevel|sync:SW_sync[7]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
