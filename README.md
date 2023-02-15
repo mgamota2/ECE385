@@ -1,3 +1,3 @@
 # ECE 385-Digital Systems Laboratory
 
-## Reports and code for various labs on FPGA
+## Code for various labs on FPGA
