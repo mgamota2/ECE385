@@ -1,0 +1,16 @@
+module counter (input clk, asynch_clr, enable, up_down,
+	output logic [7:0] Q);
+	always_ff @ (posedge clk or posedge asynch_clr)
+	/* Placing “posedge asynch_clr” in the sensitivity list enables clear whenever
+	 asynch_clr is on a rising edge. If “posedge asynch_clr” is not in the sensitivity
+	 list, then the circuit will only be cleared if asynch_clr is high during a rising
+	edge
+	 of the clk, i.e., the circuit will be synchronously cleared */
+		begin
+		if (asynch_clr)
+		Q <= 3'b0;
+		else if (enable)
+		if (up_down)
+		 Q <= Q + 1'b1;
+		
+endmodule

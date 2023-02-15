@@ -1,0 +1,7 @@
+
+State Machine - |mult_toplevel|control:control_unit|curr_state
+Name curr_state.Sub_state curr_state.Shift_state curr_state.Add_state curr_state.Clear_state 
+curr_state.Clear_state 0 0 0 0 
+curr_state.Add_state 0 0 1 1 
+curr_state.Shift_state 0 1 0 1 
+curr_state.Sub_state 1 0 0 1 

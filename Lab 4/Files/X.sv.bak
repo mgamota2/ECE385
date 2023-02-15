@@ -1,0 +1,19 @@
+module x_reg(
+   input Clk
+	input logic x_in, clear,
+	output logic x_out
+
+);
+
+	always_comb
+		begin
+			if (clear)
+				x_in =0;
+				c_out=0;
+			else
+				x_out=x_in;
+		end
+
+
+
+endmodule

@@ -1,0 +1,16 @@
+Partition Merge Status : Successful - Tue Feb 14 15:48:51 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Lab4
+Top-level Entity Name : mult_toplevel
+Family : MAX 10
+Total logic elements : 698
+    Total combinational functions : 482
+    Dedicated logic registers : 495
+Total registers : 495
+Total pins : 65
+Total virtual pins : 0
+Total memory bits : 1,280
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
