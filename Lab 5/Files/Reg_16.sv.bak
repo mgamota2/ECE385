@@ -1,0 +1,15 @@
+module reg_16(
+	input logic clear, load, clk
+	input logic [15:0] input_vals,
+	output logic [15:0] output_vals
+)
+
+always_ff @ (posedge clk)
+begin
+	if (clear)
+		output_vals=16'h00;
+	else if (load)
+		output_vals<=input_vals;
+end
+
+endmodule

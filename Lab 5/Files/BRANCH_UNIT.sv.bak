@@ -1,0 +1,28 @@
+module BRANCH_UNIT (
+				input [15:0] BUS, IR,
+				input [2:0] SR2,
+				input LD_REG, DR_MUX, SR1MUX,  Clk,
+				output logic [15:0] SR1OUT, SR2OUT
+);
+	
+	
+	logic [2:0] DR_MUX_OUT;
+	logic [2:0] SR1_MUX_OUT;
+	
+	logic [15:0] REG_FILE [7:0];
+	
+	mux2_1_16	SR1MUX_UNIT(.S(SR1MUX), .A_In(IR[11:9]), .B_In(IR[8:6]), .Q_Out(SR1_MUX_OUT));
+	
+	mux2_1_16	DRMUX_UNIT(.S(DR_MUX), .A_In(3'b111), .B_In(IR[11:9]), .Q_Out(DR_MUX_OUT));
+	
+	//Output SR1, SR2, and update DR (may have to change)
+	always_ff @ (posedge Clk)
+	begin
+		if(LD_REG)
+			SR1OUT=REG_FILE[SR1_MUX_OUT];
+			SR2OUT=REG_FILE[SR2];
+			REG_FILE[DR_MUX_OUT]=BUS;	
+	end
+
+
+endmodule 

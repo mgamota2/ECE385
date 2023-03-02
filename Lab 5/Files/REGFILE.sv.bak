@@ -1,0 +1,29 @@
+module REGFILE (
+				input [15:0] BUS, IR,
+				input [1:0] ALUK,
+				input LD_REG,
+				output logic [15:0] ALUOUT
+
+);
+	logic [15:0] B;
+	logic sext_4 = (16'(signed'(IR[4:0])));
+	
+	mux2_1_16	SR2MUX_UNIT(.S(SR2MUX), .A_In(SR2OUT), .B_In(sext_4), .Q_Out(B));
+	
+	//00 = and, 01 = not, 10=add
+	always_comb
+	begin
+		case(ALUK)
+			2'b00: 
+				ALUOUT = SR1OUT & B;
+			2'b01:
+				ALUOUT = ~(SR1OUT);
+			2'b10: 
+				ALUOUT = SR1OUT + B;	
+			
+			default: ALUOUT={16{'Z}};	
+		endcase
+	end
+
+
+endmodule 

@@ -1,0 +1,648 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/simulation/modelsim
+vADDR_MUX_UNIT
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1677722199
+!i10b 1
+!s100 fID=<beG:_2@?hS3lS3o72
+IReDT[gbGeQU;aAcj?jkNB0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 addr_mux_unit_sv_unit
+S1
+R0
+w1677642952
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/addr_mux_unit.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/addr_mux_unit.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1677722199.000000
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/addr_mux_unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/addr_mux_unit.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work {+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files}
+Z8 tCvgOpt 0
+n@a@d@d@r_@m@u@x_@u@n@i@t
+vALU
+R1
+R2
+!i10b 1
+!s100 _LRJ@EAUPV7Iok;]OAi_l3
+IS<E0om;NW4H]LD1?<ZR@[1
+R3
+!s105 ALU_sv_unit
+S1
+R0
+w1677639473
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ALU.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ALU.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ALU.sv|
+!i113 1
+R6
+R7
+R8
+n@a@l@u
+vBRANCH_UNIT
+R1
+Z9 !s110 1677722200
+!i10b 1
+!s100 c7^j2jBF=9lAkUGUfo6@I2
+I?LCn]gZ>5MXL_h@k]]R4O3
+R3
+!s105 BRANCH_UNIT_sv_unit
+S1
+R0
+w1677718828
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/BRANCH_UNIT.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/BRANCH_UNIT.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z10 !s108 1677722200.000000
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/BRANCH_UNIT.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/BRANCH_UNIT.sv|
+!i113 1
+R6
+R7
+R8
+n@b@r@a@n@c@h_@u@n@i@t
+vdatapath
+R1
+Z11 DXx4 work 6 SLC3_2 0 22 hOAmkdDXBjFPo5WF`;JCi3
+DXx4 work 16 datapath_sv_unit 0 22 YOPg<mM6HQgEFc?1Bfbaj1
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 Jb9][cDHT5iCYCB7RUL;`2
+IzF=F4Z[BM4f07GmZWXQPk2
+!s105 datapath_sv_unit
+S1
+R0
+Z12 w1677644093
+Z13 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv
+Z14 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv
+L0 4
+R4
+R10
+Z15 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/SLC3_2.sv|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv|
+Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv|
+!i113 1
+R6
+R7
+R8
+Xdatapath_sv_unit
+R1
+R11
+VYOPg<mM6HQgEFc?1Bfbaj1
+r1
+!s85 0
+31
+!i10b 1
+!s100 4Jl`e5TgcN87o03hMR_^F3
+IYOPg<mM6HQgEFc?1Bfbaj1
+!i103 1
+S1
+R0
+R12
+R13
+R14
+Z17 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/SLC3_2.sv
+L0 2
+R4
+R10
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vHexDriver
+R1
+R2
+!i10b 1
+!s100 @7:EV1nkVC8T9F9SP9Mj83
+Ii[i5WAQeVHb4WVzh::XVi1
+R3
+!s105 HexDriver_sv_unit
+S1
+R0
+w1676410836
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/HexDriver.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/HexDriver.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/HexDriver.sv|
+!i113 1
+R6
+R7
+R8
+n@hex@driver
+vISDU
+R1
+R11
+DXx4 work 12 ISDU_sv_unit 0 22 jNN0P]b`b@jHSkEGL4TR93
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 jmMnmDazG9W7UGSFV44ST0
+I1^?U7=QAo7Dk?3@ad_kgz1
+!s105 ISDU_sv_unit
+S1
+R0
+Z18 w1677721180
+Z19 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ISDU.sv
+Z20 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ISDU.sv
+Z21 L0 20
+R4
+R10
+Z22 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/SLC3_2.sv|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ISDU.sv|
+Z23 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ISDU.sv|
+!i113 1
+R6
+R7
+R8
+n@i@s@d@u
+XISDU_sv_unit
+R1
+R11
+VjNN0P]b`b@jHSkEGL4TR93
+r1
+!s85 0
+31
+!i10b 1
+!s100 PZ?:;lH1<mEO579fE9_cN3
+IjNN0P]b`b@jHSkEGL4TR93
+!i103 1
+S1
+R0
+R18
+R19
+R20
+R17
+L0 18
+R4
+R10
+R22
+R23
+!i113 1
+R6
+R7
+R8
+n@i@s@d@u_sv_unit
+vMem2IO
+R1
+Z24 !s110 1677722198
+!i10b 1
+!s100 ]Q:NN9GIUgNPLn_MG6U5k1
+Ibcelg:n9keK]LbfRM4>d>3
+R3
+!s105 Mem2IO_sv_unit
+S1
+R0
+Z25 w1677015096
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Mem2IO.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Mem2IO.sv
+L0 16
+R4
+r1
+!s85 0
+31
+Z26 !s108 1677722198.000000
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Mem2IO.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Mem2IO.sv|
+!i113 1
+R6
+R7
+R8
+n@mem2@i@o
+Xmemory_contents_sv_unit
+R1
+R11
+VOVVG7z:PH>=_QCQ1AJ7Xo0
+r1
+!s85 0
+31
+!i10b 1
+!s100 :0FBYob897RSc><Y^lI?F2
+IOVVG7z:PH>=_QCQ1AJ7Xo0
+!i103 1
+S1
+R0
+Z27 w1677721851
+Z28 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/memory_contents.sv
+Z29 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/memory_contents.sv
+L0 17
+R4
+R10
+Z30 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/memory_contents.sv|
+Z31 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/memory_contents.sv|
+!i113 1
+R6
+R7
+R8
+vmemory_parser
+R1
+R11
+DXx4 work 23 memory_contents_sv_unit 0 22 OVVG7z:PH>=_QCQ1AJ7Xo0
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 hfX5[fVi=fEbdX7KInPF?2
+I?4NhW]:R;AZl9NmgW446H1
+!s105 memory_contents_sv_unit
+S1
+R0
+R27
+R28
+R29
+L0 19
+R4
+R10
+R30
+R31
+!i113 1
+R6
+R7
+R8
+vmux2_1_16
+R1
+R2
+!i10b 1
+!s100 ;5a4>W[8Qe?@Q;gFZaglQ2
+IR:2g;I9V8aaCoEEhkGBiH0
+R3
+Z32 !s105 MUX_16_sv_unit
+S1
+R0
+Z33 w1677643057
+Z34 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_16.sv
+Z35 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_16.sv
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+Z36 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_16.sv|
+Z37 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_16.sv|
+!i113 1
+R6
+R7
+R8
+vmux2_1_3
+R1
+R2
+!i10b 1
+!s100 odGX>mNl_^B1o393W]hcL3
+IC1No0K=RlDJG9Y:o;BMfX1
+R3
+!s105 MUX_3_sv_unit
+S1
+R0
+w1677644363
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_3.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_3.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_3.sv|
+!i113 1
+R6
+R7
+R8
+vmux4_1_16
+R1
+R2
+!i10b 1
+!s100 @Oa><En`hEnWGAfUlfhGf2
+IlEmj7<^3gLVb_Bfbf49i31
+R3
+R32
+S1
+R0
+R33
+R34
+R35
+Z38 L0 26
+R4
+r1
+!s85 0
+31
+R5
+R36
+R37
+!i113 1
+R6
+R7
+R8
+vreg_16
+R1
+R2
+!i10b 1
+!s100 CbToZ=kT0K4K[YXUW2TQ^1
+I;T3^>?eGP[jN;WQ3^JA?_0
+R3
+!s105 Reg_16_sv_unit
+S1
+R0
+w1677124515
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Reg_16.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Reg_16.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Reg_16.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Reg_16.sv|
+!i113 1
+R6
+R7
+R8
+vREGFILE
+R1
+R2
+!i10b 1
+!s100 :Gco@<K=k[XKZDLOCPHDO3
+IcKgObbM@V36PlX:IHDkol0
+R3
+!s105 REGFILE_sv_unit
+S1
+R0
+w1677714191
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/REGFILE.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/REGFILE.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/REGFILE.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/REGFILE.sv|
+!i113 1
+R6
+R7
+R8
+n@r@e@g@f@i@l@e
+vslc3
+R1
+R9
+!i10b 1
+!s100 ^<NHDjzhhWY6<YoeEIJYb1
+IbFLg53bfZ0GBNl?Sk5i180
+R3
+!s105 slc3_sv_unit
+S1
+R0
+w1677721069
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv
+R21
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv|
+!i113 1
+R6
+R7
+R8
+XSLC3_2
+R1
+R9
+!i10b 1
+!s100 Cz8_^@QRefP31?j=Zf>lj0
+IhOAmkdDXBjFPo5WF`;JCi3
+VhOAmkdDXBjFPo5WF`;JCi3
+S1
+R0
+R25
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/SLC3_2.sv
+R17
+L0 24
+R4
+r1
+!s85 0
+31
+R10
+R15
+R16
+!i113 1
+R6
+R7
+R8
+n@s@l@c3_2
+vslc3_testtop
+R1
+R9
+!i10b 1
+!s100 ZK02Oh8FF2Jk>8HUe:zM_3
+IhkWCVA3LeVehcAVYL9<eN1
+R3
+!s105 slc3_testtop_sv_unit
+S1
+R0
+w1677117205
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv
+L0 4
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv|
+!i113 1
+R6
+R7
+R8
+vsync
+R1
+R24
+!i10b 1
+!s100 OHNUFN]797>kYzRL;ikZR2
+I[i>RDzSILAQjN2KSAniEM2
+R3
+Z39 !s105 synchronizers_sv_unit
+S1
+R0
+R25
+Z40 8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/synchronizers.sv
+Z41 FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/synchronizers.sv
+L0 7
+R4
+r1
+!s85 0
+31
+R26
+Z42 !s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/synchronizers.sv|
+Z43 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/synchronizers.sv|
+!i113 1
+R6
+R7
+R8
+vsync_r0
+R1
+R24
+!i10b 1
+!s100 _Sn:CfHFjznVZen=7jc>C2
+I`?B0nhIQP_Yo;bDk`BGS=3
+R3
+R39
+S1
+R0
+R25
+R40
+R41
+L0 21
+R4
+r1
+!s85 0
+31
+R26
+R42
+R43
+!i113 1
+R6
+R7
+R8
+vsync_r1
+R1
+R24
+!i10b 1
+!s100 4jfZd?z`MK2Y<NLFC0<QH2
+ISLjaP;LCAHWKbXNzaETo]0
+R3
+R39
+S1
+R0
+R25
+R40
+R41
+L0 42
+R4
+r1
+!s85 0
+31
+R26
+R42
+R43
+!i113 1
+R6
+R7
+R8
+vtest_memory
+R1
+R24
+!i10b 1
+!s100 JAXhO?6GV:H>``me>_X5<1
+IlFcilH?PignV6RYNQDi>H3
+R3
+!s105 test_memory_sv_unit
+S1
+R0
+R25
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/test_memory.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/test_memory.sv
+R38
+R4
+r1
+!s85 0
+31
+R26
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/test_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/test_memory.sv|
+!i113 1
+R6
+R7
+R8
+vtestbench
+R1
+!s110 1677722201
+!i10b 1
+!s100 2fbOz4[?Vnj7PZlUSdP0:2
+ITODeEF5nWQF@;Q0bi9c3T0
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1677722156
+8C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/testbench.sv
+FC:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/testbench.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files|C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/testbench.sv|
+!i113 1
+R6
+R7
+R8
+vtristate_mux
+R1
+R2
+!i10b 1
+!s100 _`a^e^;^@SIKm`10:nTT_3
+IHi=8MGaC5]_88<dm7j[1Q3
+R3
+R32
+S1
+R0
+R33
+R34
+R35
+L0 48
+R4
+r1
+!s85 0
+31
+R5
+R36
+R37
+!i113 1
+R6
+R7
+R8

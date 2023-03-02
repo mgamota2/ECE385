@@ -1,0 +1,246 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab5_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/test_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:38 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/test_memory.sv 
+# -- Compiling module test_memory
+# 
+# Top level modules:
+# 	test_memory
+# End time: 19:56:38 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/synchronizers.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:38 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/synchronizers.sv 
+# -- Compiling module sync
+# -- Compiling module sync_r0
+# -- Compiling module sync_r1
+# 
+# Top level modules:
+# 	sync
+# 	sync_r0
+# 	sync_r1
+# End time: 19:56:38 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/SLC3_2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:38 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/SLC3_2.sv 
+# -- Compiling package SLC3_2
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:56:38 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Mem2IO.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:38 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Mem2IO.sv 
+# -- Compiling module Mem2IO
+# 
+# Top level modules:
+# 	Mem2IO
+# End time: 19:56:38 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:39 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 19:56:39 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Reg_16.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:39 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/Reg_16.sv 
+# -- Compiling module reg_16
+# 
+# Top level modules:
+# 	reg_16
+# End time: 19:56:39 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_16.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:39 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_16.sv 
+# -- Compiling module mux2_1_16
+# -- Compiling module mux4_1_16
+# -- Compiling module tristate_mux
+# 
+# Top level modules:
+# 	mux2_1_16
+# 	mux4_1_16
+# 	tristate_mux
+# End time: 19:56:39 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:39 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_3.sv 
+# -- Compiling module mux2_1_3
+# 
+# Top level modules:
+# 	mux2_1_3
+# End time: 19:56:39 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/addr_mux_unit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:39 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/addr_mux_unit.sv 
+# -- Compiling module ADDR_MUX_UNIT
+# 
+# Top level modules:
+# 	ADDR_MUX_UNIT
+# End time: 19:56:39 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:39 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 19:56:39 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/REGFILE.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:39 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/REGFILE.sv 
+# -- Compiling module REGFILE
+# 
+# Top level modules:
+# 	REGFILE
+# End time: 19:56:39 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/BRANCH_UNIT.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:40 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/BRANCH_UNIT.sv 
+# -- Compiling module BRANCH_UNIT
+# 
+# Top level modules:
+# 	BRANCH_UNIT
+# End time: 19:56:40 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/memory_contents.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:40 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/memory_contents.sv 
+# -- Compiling package memory_contents_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module memory_parser
+# 
+# Top level modules:
+# 	memory_parser
+# End time: 19:56:40 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ISDU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:40 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ISDU.sv 
+# -- Compiling package SLC3_2
+# -- Compiling package ISDU_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module ISDU
+# 
+# Top level modules:
+# 	ISDU
+# End time: 19:56:40 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:40 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv 
+# -- Compiling package SLC3_2
+# -- Compiling package datapath_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 19:56:40 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:40 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv 
+# -- Compiling module slc3
+# 
+# Top level modules:
+# 	slc3
+# End time: 19:56:40 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:40 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv 
+# -- Compiling module slc3_testtop
+# 
+# Top level modules:
+# 	slc3_testtop
+# End time: 19:56:40 on Mar 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Lab\ 5/Files {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:40 on Mar 01,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files" C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 19:56:41 on Mar 01,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 19:56:41 on Mar 01,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.slc3_testtop
+# Loading work.slc3
+# Loading work.SLC3_2
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.reg_16
+# Loading work.mux4_1_16
+# Loading work.mux2_1_16
+# Loading work.BRANCH_UNIT
+# Loading work.REGFILE
+# Loading work.mux2_1_3
+# Loading work.ADDR_MUX_UNIT
+# Loading work.ALU
+# Loading work.tristate_mux
+# Loading work.Mem2IO
+# Loading work.ISDU_sv_unit
+# Loading work.ISDU
+# Loading work.test_memory
+# Loading work.memory_contents_sv_unit
+# Loading work.memory_parser
+# Loading work.HexDriver
+# Loading work.sync
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 2000 ns
+# End time: 20:02:58 on Mar 01,2023, Elapsed time: 0:06:17
+# Errors: 0, Warnings: 0
