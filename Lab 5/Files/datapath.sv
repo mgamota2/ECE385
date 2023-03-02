@@ -16,6 +16,7 @@ module datapath( input logic Clk, Reset,
 logic [3:0] buffer_mux;
 logic [15:0] PC_IN, BUS, ADDER_OUT, MIO_OUT, ALU_OUT, MDR_NEXT, PC_NEXT
 					,SR1OUT, SR2OUT;
+logic [2:0] SR2;
 
 assign buffer_mux = {GateMDR, GateMARMUX, GatePC, GateALU};
 

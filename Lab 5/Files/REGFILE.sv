@@ -20,6 +20,7 @@ module REGFILE (
 	
 	always_ff @ (posedge Clk)
 	begin
+
 		if (Reset) begin 
 			REG_FILE [0]<=16'h0000;
 			REG_FILE [1]<=16'h0000;

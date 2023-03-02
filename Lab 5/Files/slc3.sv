@@ -77,15 +77,15 @@ ISDU state_controller(
    .Mem_OE(OE), .Mem_WE(WE)
 );
 
- //SRAM WE register
-logic SRAM_WE_In, SRAM_WE;
-// SRAM WE synchronizer
-always_ff @(posedge Clk or posedge Reset)
-begin
-	if (Reset) SRAM_WE <= 1'b1; //resets to 1
-	else 
-		SRAM_WE <= SRAM_WE_In;
-end
-
-	
+// //SRAM WE register
+//logic SRAM_WE_In, SRAM_WE;
+//// SRAM WE synchronizer
+//always_ff @(posedge Clk or posedge Reset_ah)
+//begin
+//	if (Reset_ah) SRAM_WE <= 1'b1; //resets to 1
+//	else 
+//		SRAM_WE <= SRAM_WE_In;
+//end
+//
+//	
 endmodule

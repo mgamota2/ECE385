@@ -222,6 +222,14 @@ module ISDU (   input logic         Clk,
 		// Assign control signals based on current state
 		case (State)
 			Halted: ;
+			PauseIR1:
+				begin
+				LD_LED=1'b1;
+				end
+			PauseIR2:
+				begin
+				LD_LED=1'b1;
+				end
 			S_18 : 
 				begin 
 					GatePC = 1'b1;
@@ -285,15 +293,25 @@ module ISDU (   input logic         Clk,
 					GateMARMUX=1'b1;
 					ADDR2MUX=2'b01;
 					ADDR1MUX=1'b1;
-					SR1MUX=1'b0;
+					SR1MUX=1'b1;
 					LD_MAR=1'b1;
 					
 				end
 			S_25:
 				begin
-					Mem_OE=1'b1;
-					LD_MDR=1'b1;					
+					Mem_OE=1'b1;					
 				end
+			S_25_1:
+				begin
+					Mem_OE=1'b1;
+					LD_MDR=1'b1;
+				end
+			S_25_2:
+				begin
+					Mem_OE=1'b1;
+					LD_MDR=1'b1;
+				end
+				
 			S_27:
 				begin
 					GateMDR=1'b1;
@@ -306,7 +324,7 @@ module ISDU (   input logic         Clk,
 					GateMARMUX=1'b1;
 					ADDR2MUX=2'b01;
 					ADDR1MUX=1'b1;
-					SR1MUX=1'b0;
+					SR1MUX=1'b1;
 					LD_MAR=1'b1;
 					
 				end
@@ -321,8 +339,15 @@ module ISDU (   input logic         Clk,
 				end
 			S_16:
 				begin
-					GateMDR=1'b1;
-					LD_MAR=1'b1;
+					Mem_WE=1'b1;
+				end
+			S_16_1:
+				begin
+					Mem_WE=1'b1;
+				end
+			S_16_2:
+				begin
+					Mem_WE=1'b1;
 				end
 			S_4:
 				begin

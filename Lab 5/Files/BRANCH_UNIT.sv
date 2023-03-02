@@ -4,35 +4,30 @@ module BRANCH_UNIT (
 				output logic BEN
 );
 	
-	logic N, Z, P;
+	logic [2:0] NZP_1, NZP_2;
+	
+	always_comb 
+	begin
+			if (BUS == 16'h0000)	
+				NZP_1=3'b010;
+				
+			else if (BUS[15] == 1'b1)	begin
+				NZP_1=3'b100;
+			end
+			
+			else begin
+				NZP_1=3'b001;
+			end
+	end
+	
 	
 	always_ff @ (posedge Clk)
 	begin
-		if(LD_CC)
-			if (BUS[15] == 1'b1)		
-				N=1'b1;
-				Z=1'b0;
-				P=1'b0;
-			if (BUS == 16'h0000)		
-				N=1'b0;
-				Z=1'b1;
-				P=1'b0;
-			if (BUS!= 16'h0000 & BUS[15]==1'b0)		
-				N=1'b0;
-				Z=1'b0;
-				P=1'b1;
-			
-		case (LD_BEN & (IR[11:9]!= 3'b000))
-			(N==1'b1 & IR[11]==1):
-				BEN=1'b1;
-			(Z==1'b1 & IR[10]==1):
-				BEN=1'b1;
-			(P==1'b1 & IR[9]==1):
-				BEN=1'b1;
-			default: BEN=1'b0;
-		endcase
-			
+		if(LD_CC) begin 
+			NZP_2=NZP_1;
+		end
+		if (LD_BEN & IR[11:9]!=3'b000) begin
+			BEN = NZP_2 & IR[11:9];
+		end
 	end
-
-
 endmodule 

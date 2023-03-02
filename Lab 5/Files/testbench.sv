@@ -43,7 +43,7 @@ timeprecision 1ns;
 
 		Continue = 0;
 		Run = 0;
-	#10 SW = 0000000011;
+	#10 SW=10'b0000010100;
 	#20 Run = 1;
 		 Continue =1;
 	 
@@ -51,9 +51,15 @@ timeprecision 1ns;
 	
 	#30 Run =1;
 	
-	#50 Continue = 0;
-	#30 Continue =1;
+	#100 SW=10'b0000111010;
 	
+	#10 Continue = 0;
+	#10 Continue =1;
+	
+	#100 SW=10'b0000110011;
+	
+	#10 Continue = 0;
+	#10 Continue =1;
 	
 	
 
