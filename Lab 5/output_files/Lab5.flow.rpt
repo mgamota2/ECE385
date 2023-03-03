@@ -1,5 +1,5 @@
 Flow report for Lab5
-Thu Mar 02 00:49:47 2023
+Thu Mar 02 22:42:29 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 02 00:49:47 2023       ;
+; Flow Status                        ; Successful - Thu Mar 02 22:42:29 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab5                                        ;
 ; Top-level Entity Name              ; slc3_testtop                                ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 646                                         ;
-;     Total combinational functions  ; 500                                         ;
-;     Dedicated logic registers      ; 239                                         ;
-; Total registers                    ; 239                                         ;
+; Total logic elements               ; 654                                         ;
+;     Total combinational functions  ; 508                                         ;
+;     Dedicated logic registers      ; 251                                         ;
+; Total registers                    ; 251                                         ;
 ; Total pins                         ; 115                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/02/2023 00:49:38 ;
+; Start date & time ; 03/02/2023 22:42:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab5                ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+----------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name    ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+----------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 4771258023320.167773977813548          ; --            ; --             ; --             ;
+; COMPILER_SIGNATURE_ID                ; 4771258023320.167781854007760          ; --            ; --             ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --             ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                              ; --            ; --             ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --             ; eda_simulation ;
@@ -86,7 +86,7 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; Files/testbench.sv                     ; --            ; --             ; testbench      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; testbench                              ; --            ; --             ; testbench      ;
 ; EDA_TEST_BENCH_NAME                  ; testbench                              ; --            ; --             ; eda_simulation ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 3000 ns                                ; --            ; --             ; testbench      ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 10000 ns                               ; --            ; --             ; testbench      ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --             ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --             ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --             ; --             ;
@@ -115,7 +115,7 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4761 MB             ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4760 MB             ; 00:00:04                           ;
 ; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 

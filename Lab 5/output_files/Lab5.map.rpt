@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab5
-Thu Mar 02 00:49:47 2023
+Thu Mar 02 22:42:29 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -19,14 +19,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: test_memory:mem
  13. Parameter Settings for User Entity Instance: test_memory:mem|memory_parser:parser
- 14. Port Connectivity Checks: "slc3:slc|ISDU:state_controller"
- 15. Port Connectivity Checks: "slc3:slc|datapath:d0|ADDR_MUX_UNIT:adder_unit|mux4_1_16:ADDR2_MUX_UNIT"
- 16. Port Connectivity Checks: "slc3:slc|datapath:d0|REGFILE:registers|mux2_1_3:DRMUX_UNIT"
- 17. Port Connectivity Checks: "slc3:slc"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
- 21. Analysis & Synthesis Suppressed Messages
+ 14. Port Connectivity Checks: "slc3:slc|datapath:d0|ADDR_MUX_UNIT:adder_unit|mux4_1_16:ADDR2_MUX_UNIT"
+ 15. Port Connectivity Checks: "slc3:slc|datapath:d0|REGFILE:registers|mux2_1_3:DRMUX_UNIT"
+ 16. Port Connectivity Checks: "slc3:slc"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -52,15 +51,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 02 00:49:47 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 02 22:42:29 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab5                                        ;
 ; Top-level Entity Name              ; slc3_testtop                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 646                                         ;
-;     Total combinational functions  ; 500                                         ;
-;     Dedicated logic registers      ; 239                                         ;
-; Total registers                    ; 239                                         ;
+; Total logic elements               ; 654                                         ;
+;     Total combinational functions  ; 508                                         ;
+;     Dedicated logic registers      ; 251                                         ;
+; Total registers                    ; 251                                         ;
 ; Total pins                         ; 115                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -203,20 +202,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 646       ;
+; Estimated Total logic elements              ; 654       ;
 ;                                             ;           ;
-; Total combinational functions               ; 500       ;
+; Total combinational functions               ; 508       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 334       ;
-;     -- 3 input functions                    ; 139       ;
-;     -- <=2 input functions                  ; 27        ;
+;     -- 4 input functions                    ; 342       ;
+;     -- 3 input functions                    ; 140       ;
+;     -- <=2 input functions                  ; 26        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 455       ;
+;     -- normal mode                          ; 463       ;
 ;     -- arithmetic mode                      ; 45        ;
 ;                                             ;           ;
-; Total registers                             ; 239       ;
-;     -- Dedicated logic registers            ; 239       ;
+; Total registers                             ; 251       ;
+;     -- Dedicated logic registers            ; 251       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 115       ;
@@ -224,9 +223,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
-; Maximum fan-out                             ; 239       ;
-; Total fan-out                               ; 2777      ;
-; Average fan-out                             ; 2.87      ;
+; Maximum fan-out                             ; 251       ;
+; Total fan-out                               ; 2847      ;
+; Average fan-out                             ; 2.88      ;
 +---------------------------------------------+-----------+
 
 
@@ -235,21 +234,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                  ; Entity Name   ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+---------------+--------------+
-; |slc3_testtop                          ; 500 (1)             ; 239 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 115  ; 0            ; 0          ; |slc3_testtop                                                                        ; slc3_testtop  ; work         ;
-;    |slc3:slc|                          ; 499 (0)             ; 237 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc                                                               ; slc3          ; work         ;
+; |slc3_testtop                          ; 508 (1)             ; 251 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 115  ; 0            ; 0          ; |slc3_testtop                                                                        ; slc3_testtop  ; work         ;
+;    |slc3:slc|                          ; 507 (0)             ; 249 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc                                                               ; slc3          ; work         ;
 ;       |HexDriver:hex_drivers[0]|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|HexDriver:hex_drivers[0]                                      ; HexDriver     ; work         ;
 ;       |HexDriver:hex_drivers[1]|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|HexDriver:hex_drivers[1]                                      ; HexDriver     ; work         ;
 ;       |HexDriver:hex_drivers[2]|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|HexDriver:hex_drivers[2]                                      ; HexDriver     ; work         ;
 ;       |HexDriver:hex_drivers[3]|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|HexDriver:hex_drivers[3]                                      ; HexDriver     ; work         ;
 ;       |ISDU:state_controller|          ; 53 (53)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|ISDU:state_controller                                         ; ISDU          ; work         ;
 ;       |Mem2IO:memory_subsystem|        ; 22 (22)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|Mem2IO:memory_subsystem                                       ; Mem2IO        ; work         ;
-;       |datapath:d0|                    ; 396 (0)             ; 194 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0                                                   ; datapath      ; work         ;
+;       |datapath:d0|                    ; 404 (10)            ; 206 (10)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0                                                   ; datapath      ; work         ;
 ;          |ADDR_MUX_UNIT:adder_unit|    ; 46 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|ADDR_MUX_UNIT:adder_unit                          ; ADDR_MUX_UNIT ; work         ;
 ;             |mux2_1_16:ADDR1MUX_UNIT|  ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|ADDR_MUX_UNIT:adder_unit|mux2_1_16:ADDR1MUX_UNIT  ; mux2_1_16     ; work         ;
 ;             |mux4_1_16:ADDR2_MUX_UNIT| ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|ADDR_MUX_UNIT:adder_unit|mux4_1_16:ADDR2_MUX_UNIT ; mux4_1_16     ; work         ;
 ;          |ALU:alu_unit|                ; 127 (32)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|ALU:alu_unit                                      ; ALU           ; work         ;
 ;             |mux2_1_16:SR2MUX_UNIT|    ; 95 (95)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|ALU:alu_unit|mux2_1_16:SR2MUX_UNIT                ; mux2_1_16     ; work         ;
-;          |BRANCH_UNIT:br_unit|         ; 13 (13)             ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|BRANCH_UNIT:br_unit                               ; BRANCH_UNIT   ; work         ;
+;          |BRANCH_UNIT:br_unit|         ; 12 (12)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|BRANCH_UNIT:br_unit                               ; BRANCH_UNIT   ; work         ;
 ;          |REGFILE:registers|           ; 102 (96)            ; 128 (128)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers                                 ; REGFILE       ; work         ;
 ;             |mux2_1_3:DRMUX_UNIT|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|mux2_1_3:DRMUX_UNIT             ; mux2_1_3      ; work         ;
 ;             |mux2_1_3:SR1MUX_UNIT|     ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|mux2_1_3:SR1MUX_UNIT            ; mux2_1_3      ; work         ;
@@ -257,7 +256,7 @@ refer to the applicable agreement for further details.
 ;          |reg_16:MAR_REG|              ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:MAR_REG                                    ; reg_16        ; work         ;
 ;          |reg_16:MDR_REG|              ; 19 (19)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:MDR_REG                                    ; reg_16        ; work         ;
 ;          |reg_16:PC_REG|               ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:PC_REG                                     ; reg_16        ; work         ;
-;          |tristate_mux:tm1|            ; 52 (52)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|tristate_mux:tm1                                  ; tristate_mux  ; work         ;
+;          |tristate_mux:tm1|            ; 51 (51)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|slc3:slc|datapath:d0|tristate_mux:tm1                                  ; tristate_mux  ; work         ;
 ;    |sync:button_sync[0]|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|sync:button_sync[0]                                                    ; sync          ; work         ;
 ;    |sync:button_sync[1]|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |slc3_testtop|sync:button_sync[1]                                                    ; sync          ; work         ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+---------------+--------------+
@@ -319,12 +318,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 239   ;
+; Total registers                              ; 251   ;
 ; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 26    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 208   ;
+; Number of registers using Clock Enable       ; 211   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -334,24 +333,25 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|Mem2IO:memory_subsystem|hex_data[1]                                ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:IR_REG|output_vals[8]                           ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:MAR_REG|output_vals[12]                         ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[0][0]                       ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[1][4]                       ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[2][13]                      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|Mem2IO:memory_subsystem|hex_data[2]                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:IR_REG|output_vals[11]                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:MAR_REG|output_vals[11]                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|BRANCH_UNIT:br_unit|NZP_2[1]                           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[0][3]                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[1][9]                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[2][6]                       ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[3][5]                       ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[4][11]                      ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[5][11]                      ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[6][11]                      ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[7][2]                       ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:MDR_REG|output_vals[13]                         ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[4][9]                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[5][5]                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[6][13]                      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|REG_FILE[7][11]                      ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:MDR_REG|output_vals[15]                         ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:PC_REG|output_vals[0]                           ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:MDR_REG|output_vals[3]                          ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |slc3_testtop|slc3:slc|datapath:d0|reg_16:MDR_REG|output_vals[2]                          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |slc3_testtop|slc3:slc|datapath:d0|ADDR_MUX_UNIT:adder_unit|mux4_1_16:ADDR2_MUX_UNIT|Mux0 ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|Mux0                                 ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |slc3_testtop|slc3:slc|datapath:d0|ALU:alu_unit|mux2_1_16:SR2MUX_UNIT|Q_Out[1]            ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |slc3_testtop|slc3:slc|datapath:d0|tristate_mux:tm1|Mux4                                  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |slc3_testtop|slc3:slc|datapath:d0|REGFILE:registers|Mux4                                 ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |slc3_testtop|slc3:slc|datapath:d0|ALU:alu_unit|mux2_1_16:SR2MUX_UNIT|Q_Out[14]           ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |slc3_testtop|slc3:slc|datapath:d0|tristate_mux:tm1|Mux8                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
 
 
@@ -374,15 +374,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; size           ; 256   ; Signed Integer                                           ;
 +----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "slc3:slc|ISDU:state_controller"                                                       ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; LD_LED ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -418,23 +409,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 115                         ;
-; cycloneiii_ff         ; 239                         ;
-;     ENA               ; 182                         ;
+; cycloneiii_ff         ; 251                         ;
+;     ENA               ; 185                         ;
 ;     ENA SCLR SLD      ; 26                          ;
-;     plain             ; 31                          ;
-; cycloneiii_lcell_comb ; 505                         ;
+;     plain             ; 40                          ;
+; cycloneiii_lcell_comb ; 512                         ;
 ;     arith             ; 45                          ;
 ;         2 data inputs ; 15                          ;
 ;         3 data inputs ; 30                          ;
-;     normal            ; 460                         ;
-;         0 data inputs ; 1                           ;
+;     normal            ; 467                         ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 109                         ;
-;         4 data inputs ; 334                         ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 110                         ;
+;         4 data inputs ; 342                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.90                       ;
-; Average LUT depth     ; 10.19                       ;
+; Max LUT depth         ; 13.70                       ;
+; Average LUT depth     ; 8.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -443,7 +433,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -453,7 +443,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Mar 02 00:49:38 2023
+    Info: Processing started: Thu Mar 02 22:42:20 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab5 -c Lab5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -503,22 +493,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file files/r
     Info (12023): Found entity 1: REGFILE File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/REGFILE.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file files/branch_unit.sv
     Info (12023): Found entity 1: BRANCH_UNIT File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/BRANCH_UNIT.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file files/ledvect12.sv
+    Info (12023): Found entity 1: LEDvect File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ledVect12.sv Line: 1
 Info (12127): Elaborating entity "slc3_testtop" for the top level hierarchy
 Info (12128): Elaborating entity "sync" for hierarchy "sync:button_sync[0]" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 16
 Info (12128): Elaborating entity "slc3" for hierarchy "slc3:slc" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 30
-Warning (10034): Output port "LED" at slc3.sv(23) has no driver File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv Line: 23
+Warning (10858): Verilog HDL warning at slc3.sv(81): object SRAM_WE_In used but never assigned File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv Line: 81
+Warning (10036): Verilog HDL or VHDL warning at slc3.sv(81): object "SRAM_WE" assigned a value but never read File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv Line: 81
 Info (12128): Elaborating entity "HexDriver" for hierarchy "slc3:slc|HexDriver:hex_drivers[0]" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv Line: 38
 Info (12128): Elaborating entity "datapath" for hierarchy "slc3:slc|datapath:d0" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv Line: 62
-Info (12128): Elaborating entity "reg_16" for hierarchy "slc3:slc|datapath:d0|reg_16:PC_REG" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 25
-Info (12128): Elaborating entity "mux4_1_16" for hierarchy "slc3:slc|datapath:d0|mux4_1_16:PC_MUX" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 31
-Info (12128): Elaborating entity "mux2_1_16" for hierarchy "slc3:slc|datapath:d0|mux2_1_16:MDR_MUX" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 34
-Info (12128): Elaborating entity "BRANCH_UNIT" for hierarchy "slc3:slc|datapath:d0|BRANCH_UNIT:br_unit" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at BRANCH_UNIT.sv(30): truncated value with size 3 to match size of target (1) File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/BRANCH_UNIT.sv Line: 30
-Info (12128): Elaborating entity "REGFILE" for hierarchy "slc3:slc|datapath:d0|REGFILE:registers" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 50
+Info (12128): Elaborating entity "reg_16" for hierarchy "slc3:slc|datapath:d0|reg_16:PC_REG" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 26
+Info (12128): Elaborating entity "mux4_1_16" for hierarchy "slc3:slc|datapath:d0|mux4_1_16:PC_MUX" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 32
+Info (12128): Elaborating entity "mux2_1_16" for hierarchy "slc3:slc|datapath:d0|mux2_1_16:MDR_MUX" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 35
+Info (12128): Elaborating entity "BRANCH_UNIT" for hierarchy "slc3:slc|datapath:d0|BRANCH_UNIT:br_unit" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 47
+Info (12128): Elaborating entity "REGFILE" for hierarchy "slc3:slc|datapath:d0|REGFILE:registers" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 51
 Info (12128): Elaborating entity "mux2_1_3" for hierarchy "slc3:slc|datapath:d0|REGFILE:registers|mux2_1_3:SR1MUX_UNIT" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/REGFILE.sv Line: 14
-Info (12128): Elaborating entity "ADDR_MUX_UNIT" for hierarchy "slc3:slc|datapath:d0|ADDR_MUX_UNIT:adder_unit" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 53
-Info (12128): Elaborating entity "ALU" for hierarchy "slc3:slc|datapath:d0|ALU:alu_unit" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 56
-Info (12128): Elaborating entity "tristate_mux" for hierarchy "slc3:slc|datapath:d0|tristate_mux:tm1" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 59
+Info (12128): Elaborating entity "ADDR_MUX_UNIT" for hierarchy "slc3:slc|datapath:d0|ADDR_MUX_UNIT:adder_unit" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 54
+Info (12128): Elaborating entity "ALU" for hierarchy "slc3:slc|datapath:d0|ALU:alu_unit" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 57
+Info (12128): Elaborating entity "tristate_mux" for hierarchy "slc3:slc|datapath:d0|tristate_mux:tm1" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/datapath.sv Line: 69
 Info (10264): Verilog HDL Case Statement information at MUX_16.sv(58): all case item expressions in this case statement are onehot File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/MUX_16.sv Line: 58
 Info (12128): Elaborating entity "Mem2IO" for hierarchy "slc3:slc|Mem2IO:memory_subsystem" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv Line: 71
 Info (12128): Elaborating entity "ISDU" for hierarchy "slc3:slc|ISDU:state_controller" File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3.sv Line: 78
@@ -562,17 +554,6 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "slc3:slc|datapath:d0|ALU:alu_unit|ALU_OUT[13]" feeding internal logic into a wire File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ALU.sv Line: 7
     Warning (13049): Converted tri-state buffer "slc3:slc|datapath:d0|ALU:alu_unit|ALU_OUT[14]" feeding internal logic into a wire File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ALU.sv Line: 7
     Warning (13049): Converted tri-state buffer "slc3:slc|datapath:d0|ALU:alu_unit|ALU_OUT[15]" feeding internal logic into a wire File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/ALU.sv Line: 7
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED[0]" is stuck at GND File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 7
-    Warning (13410): Pin "LED[1]" is stuck at GND File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 7
-    Warning (13410): Pin "LED[2]" is stuck at GND File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 7
-    Warning (13410): Pin "LED[3]" is stuck at GND File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 7
-    Warning (13410): Pin "LED[4]" is stuck at GND File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 7
-    Warning (13410): Pin "LED[5]" is stuck at GND File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 7
-    Warning (13410): Pin "LED[6]" is stuck at GND File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 7
-    Warning (13410): Pin "LED[7]" is stuck at GND File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 7
-    Warning (13410): Pin "LED[8]" is stuck at GND File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 7
-    Warning (13410): Pin "LED[9]" is stuck at GND File: C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/Files/slc3_testtop.sv Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 24 assignments for entity "adder_toplevel" -- entity does not exist in design
@@ -653,13 +634,13 @@ Warning (20013): Ignored 24 assignments for entity "ripple_adder" -- entity does
 Info (144001): Generated suppressed messages file C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Lab 5/output_files/Lab5.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 787 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 796 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 102 output pins
-    Info (21061): Implemented 672 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 126 warnings
-    Info: Peak virtual memory: 4761 megabytes
-    Info: Processing ended: Thu Mar 02 00:49:47 2023
+    Info (21061): Implemented 681 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 115 warnings
+    Info: Peak virtual memory: 4760 megabytes
+    Info: Processing ended: Thu Mar 02 22:42:29 2023
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:04
 

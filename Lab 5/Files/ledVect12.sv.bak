@@ -1,0 +1,5 @@
+module LEDvect(	input [11:0] ledVect12,
+						input LD_LED,
+						output [9:0] LED
+
+);

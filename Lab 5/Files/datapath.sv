@@ -3,12 +3,13 @@ import SLC3_2::*;
 
 module datapath( input logic Clk, Reset,
 						input logic GateMARMUX, GateALU, GatePC, GateMDR,
-						input logic LD_PC, LD_MDR, LD_MAR, LD_IR, LD_REG, DRMUX, LD_BEN, LD_CC,
+						input logic LD_PC, LD_MDR, LD_MAR, LD_IR, LD_REG, DRMUX, LD_BEN, LD_CC, LD_LED,
 						input logic MIO_EN, ADDR1MUX, SR1MUX, SR2MUX,
 						input logic [1:0] PCMUX, ADDR2MUX, ALUK, 
 						input logic [15:0] MDR_In,
 						output logic [15:0] PC, MDR, MAR, IR,
-						output logic BEN
+						output logic BEN,
+						output logic [9:0] LED
 					
 );
 
@@ -54,6 +55,15 @@ assign buffer_mux = {GateMDR, GateMARMUX, GatePC, GateALU};
 		
 		//ALU
 		ALU alu_unit(.*);
+		
+		//LED
+		always_ff @ (posedge Clk)
+			begin
+				if (LD_LED)
+					LED = IR[11:2];
+				else
+					LED = 10'b0;
+			end	
 		
 		//Tri state buffer implementation	
 		tristate_mux tm1(.S(buffer_mux), .Gate_MDR_16(MDR) ,.Gate_MARMUX_16(ADDER_OUT), .Gate_PC_16(PC),.Gate_ALU_16(ALU_OUT), .Q_Out(BUS));
