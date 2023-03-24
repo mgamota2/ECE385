@@ -40,54 +40,146 @@ timeprecision 1ns;
 	
 	// begin testing
 	initial begin: TEST_VECTORS
+		Continue = 0;
+		Run = 0;
+	#10 SW=10'b00001011010;
+	#20 Run = 1;
+		 Continue =1;
+	 
+	#25 Run =0;
+	
+	#30 Run =1;
+	
+	#1000 SW=10'b0000000011;
+	
+	#10 Continue = 0;
+	#10 Continue =1;
+	
+	#1000 Continue = 0;
+	#5 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#20 Continue =1;
+	
+	#200 Continue = 0;
+	#20 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	
+	//Sort
+	#1000 SW=10'b0000000010;
+	
+	#10 Continue = 0;
+	#10 Continue =1;
+	
+		
+	//Display sorted
 
-//		Continue = 0;
-//		Run = 0;
-//	#10 SW=10'b0000110001;
-//	#20 Run = 1;
-//		 Continue =1;
-//	 
-//	#25 Run =0;
-//	
-//	#30 Run =1;
-//	
-//	#100 SW=10'b0000000010;
-//	
-//	#10 Continue = 0;
-//	#10 Continue =1;
-//	
-//	#100 SW=10'b0000000011;
-//	
-//	#10 Continue = 0;
-//	#10 Continue =1;
+	#40000 SW=10'b0000000011;
+	
+	#10 Continue = 0;
+	#10 Continue =1;
+	
+	#1000 Continue = 0;
+	#5 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#20 Continue =1;
+	
+	#200 Continue = 0;
+	#20 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+	
+	#200 Continue = 0;
+	#10 Continue =1;
+
+
+	
+	
+	
+	
 //	
 //	Continue =0;
 //	Run=0;
-//	#20 Continue 1;
+//	#20 Continue =1;
 //	#50 Run=1;
 	
-	Continue = 1'b0;
-Run = 1'b0;
-#4 Continue = 1'b1;
-Run = 1'b1;
-
-#10 SW = 16'h0006;
-#30 Run = 1'b0;
-#2 Run=1'b1;
-
-
-#100 SW = 16'hFFFF;
-   #2 Continue = 1'b0;
-#2 Continue = 1'b1;
-
-#100 Continue = 1'b0;
-#2 Continue = 1'b1;
-#100 Continue = 1'b0;
-#2 Continue = 1'b1;
-#100 Continue = 1'b0;
-#2 Continue = 1'b1;
-#100 Continue = 1'b0;
-    Run = 1'b0;
 	
 
 	end
