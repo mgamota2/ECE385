@@ -6,7 +6,7 @@ module x_reg(
 );
 
 
-   always @ (posedge Clk)  
+   always_ff @ (posedge Clk)  
       if (clear)  
          x_out <= 0;  
       else   

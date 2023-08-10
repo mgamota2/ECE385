@@ -1,0 +1,13 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Final\ Project/UART {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Final Project/UART/RX_UART.sv}
+vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Final\ Project/UART {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Final Project/UART/GPS_UART.sv}
+vlog -sv -work work +incdir+C:/Users/mggam/Documents/Sophomore/Sem\ 2/ECE\ 385/Final\ Project/UART {C:/Users/mggam/Documents/Sophomore/Sem 2/ECE 385/Final Project/UART/gps_toplevel.sv}
+vlib final_soc
+vmap final_soc final_soc
+

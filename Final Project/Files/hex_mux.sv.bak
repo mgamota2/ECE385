@@ -1,0 +1,19 @@
+module hex_mux (
+				input SW0,
+				input SW1,
+				input [7:0] lat_min,
+				input [7:0] lon_min,
+				input [31:0] timestamp,
+				input correct,
+				output logic [23:0] hex_data
+);
+
+always_comb begin
+	if (sW0 & ~SW1)begin //Record mode, display coords
+	end
+	
+	else if (~SW0 & SW1) //Plot mode, display time
+
+end
+
+endmodule

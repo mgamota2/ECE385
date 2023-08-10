@@ -1,0 +1,28 @@
+
+State Machine - |final_project|gps_toplevel:gps|GPS_UART:data_processor|next_state
+Name next_state.CHECKSUM next_state.DONE next_state.READ_SENTENCE next_state.WAIT_START 
+next_state.WAIT_START 0 0 0 0 
+next_state.READ_SENTENCE 0 0 1 1 
+next_state.DONE 0 1 0 1 
+next_state.CHECKSUM 1 0 0 1 
+
+State Machine - |final_project|gps_toplevel:gps|GPS_UART:data_processor|curr_state
+Name curr_state.CHECKSUM curr_state.DONE curr_state.READ_SENTENCE curr_state.WAIT_START 
+curr_state.WAIT_START 0 0 0 0 
+curr_state.READ_SENTENCE 0 0 1 1 
+curr_state.DONE 0 1 0 1 
+curr_state.CHECKSUM 1 0 0 1 
+
+State Machine - |final_project|gps_toplevel:gps|RX_UART:uart_rx_unit|next_state
+Name next_state.STOP_BIT next_state.DATA_BITS next_state.START_BIT next_state.IDLE 
+next_state.IDLE 0 0 0 0 
+next_state.START_BIT 0 0 1 1 
+next_state.DATA_BITS 0 1 0 1 
+next_state.STOP_BIT 1 0 0 1 
+
+State Machine - |final_project|gps_toplevel:gps|RX_UART:uart_rx_unit|curr_state
+Name curr_state.STOP_BIT curr_state.DATA_BITS curr_state.START_BIT curr_state.IDLE 
+curr_state.IDLE 0 0 0 0 
+curr_state.START_BIT 0 0 1 1 
+curr_state.DATA_BITS 0 1 0 1 
+curr_state.STOP_BIT 1 0 0 1 

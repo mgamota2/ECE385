@@ -1,0 +1,15 @@
+module gps_toplevel(
+							input Clk, Reset, serial_data_in,
+							output logic done, finished,
+							output logic [15:0] lat_min,
+							output logic [15:0] lon_min
+
+);
+logic [7:0] uart_rx;
+logic [7:0] sentence [0:79], //Store 80 bytes of data
+
+RX_UART uart_rx_unit(.*, .data_8(uart_rx)); //Instantiate uart receiver
+GPS_UART data_processor(.*); //Instantiate data processor
+
+
+endmodule

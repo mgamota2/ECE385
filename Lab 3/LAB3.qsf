@@ -56,11 +56,7 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench -sect
 set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE 385_lab3_adders_provided_sp23/testbench.sv -section_id testbench
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1200 ns" -section_id testbench
 set_location_assignment PIN_C10 -to SW[0]
 set_location_assignment PIN_C11 -to SW[1]
 set_location_assignment PIN_D12 -to SW[2]
@@ -126,15 +122,21 @@ set_location_assignment PIN_N18 -to HEX5[3]
 set_location_assignment PIN_M20 -to HEX5[4]
 set_location_assignment PIN_N19 -to HEX5[5]
 set_location_assignment PIN_N20 -to HEX5[6]
-set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name ENABLE_SIGNALTAP OFF
 set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
-set_global_assignment -name SYSTEMVERILOG_FILE 385_lab3_adders_provided_sp23/adder_toplevel.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE 385_lab3_adders_provided_sp23/testbench.sv -section_id testbench
+set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
+set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SDC_FILE LAB3.out.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../../../Downloads/sdctestcase/reg_17.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../../../Downloads/sdctestcase/mux2_1_17.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../../../Downloads/sdctestcase/HexDriver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../../../Downloads/sdctestcase/control.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../../../Downloads/sdctestcase/adder_toplevel.sv
 set_global_assignment -name SYSTEMVERILOG_FILE 385_lab3_adders_provided_sp23/ripple_adder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE 385_lab3_adders_provided_sp23/select_adder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE 385_lab3_adders_provided_sp23/reg_17.sv
-set_global_assignment -name SYSTEMVERILOG_FILE 385_lab3_adders_provided_sp23/mux2_1_17.sv
 set_global_assignment -name SYSTEMVERILOG_FILE 385_lab3_adders_provided_sp23/lookahead_adder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE 385_lab3_adders_provided_sp23/HexDriver.sv
-set_global_assignment -name SYSTEMVERILOG_FILE 385_lab3_adders_provided_sp23/control.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp

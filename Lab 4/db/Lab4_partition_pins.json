@@ -180,30 +180,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "counter[0]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[1]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Shift",
-					"strict" : false
-				},
-				{
-					"name" : "add",
-					"strict" : false
-				},
-				{
-					"name" : "sub",
-					"strict" : false
-				},
-				{
 					"name" : "Clk",
 					"strict" : false
 				},

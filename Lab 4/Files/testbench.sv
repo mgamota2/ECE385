@@ -10,10 +10,11 @@ logic Clk, Reset_Load_Clear, Run;
 logic [7:0]			SW;
 
 logic [7:0] Aval, Bval, A;
-logic [2:0] counter;
-logic Shift;
-logic add;
-logic sub;
+//logic [2:0] counter;
+//logic Shift;
+//logic add;
+//logic sub;
+logic x_out;
 logic [6:0]	HEX0, 
 											HEX1, 
 											HEX2, 
@@ -48,24 +49,58 @@ initial begin: TEST_VECTORS
 Reset_Load_Clear = 1;		// Toggle Rest
 Run = 1;
 
-SW = 8'hff;	// Specify Din, F, and R
+//Test 1: 7*(-59)
+
+#5 SW = 8'b00000111;	// Specify Din, F, and R
 
 #20 Reset_Load_Clear = 0;
 
 #20 Reset_Load_Clear = 1;
 
-SW = 8'hff;
+#5 SW = 8'b11000101;
 
 #2 Run = 0;	// Toggle Execute
-#40 Run =1;
+#2 Run =1;
 
-#30 SW = 8'hff;
 
-#10 Run=0;
-#2 Run=1;
+//Test 2 (-59)*7
 
-#40 Run=0;
-#2 Run=1;
+#30 SW = 8'b11000101;	// Specify Din, F, and R
+
+#20 Reset_Load_Clear = 0;
+
+#10 Reset_Load_Clear = 1;
+
+#5 SW = 8'b00000111;
+
+#2 Run = 0;	// Toggle Execute
+#2 Run =1;
+
+//Test 3 (-3)*(-3)
+
+#30 SW = 8'b11111101;	// Specify Din, F, and R
+
+#20 Reset_Load_Clear = 0;
+
+#10 Reset_Load_Clear = 1;
+
+#5 SW = 8'b11111101;
+
+#2 Run = 0;	// Toggle Execute
+#2 Run =1;
+
+//Test 4 (5)*(5)
+
+#30 SW = 8'b00000101;	// Specify Din, F, and R
+
+#20 Reset_Load_Clear = 0;
+
+#10 Reset_Load_Clear = 1;
+
+#5 SW = 8'b00000101;
+
+#2 Run = 0;	// Toggle Execute
+#2 Run =1;
 
 end
 endmodule

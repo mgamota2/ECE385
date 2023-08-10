@@ -1,0 +1,220 @@
+/************************************************************************
+Avalon-MM Interface VGA Text mode display
+
+Register Map:
+0x000-0x0257 : VRAM, 80x30 (2400 byte, 600 word) raster order (first column then row)
+0x258        : control register
+
+VRAM Format:
+X->
+[ 31  30-24][ 23  22-16][ 15  14-8 ][ 7    6-0 ]
+[IV3][CODE3][IV2][CODE2][IV1][CODE1][IV0][CODE0]
+
+IVn = Draw inverse glyph
+CODEn = Glyph code from IBM codepage 437
+
+Control Register Format:
+[[31-25][24-21][20-17][16-13][ 12-9][ 8-5 ][ 4-1 ][   0    ] 
+[[RSVD ][FGD_R][FGD_G][FGD_B][BKG_R][BKG_G][BKG_B][RESERVED]
+
+VSYNC signal = bit which flips on every Vsync (time for new frame), used to synchronize software
+BKG_R/G/B = Background color, flipped with foreground when IVn bit is set
+FGD_R/G/B = Foreground color, flipped with background when Inv bit is set
+
+************************************************************************/
+
+module vga_text_avl_interface (
+	// Avalon Clock Input, note this clock is also used for VGA, so this must be 50Mhz
+	// We can put a clock divider here in the future to make this IP more generalizable
+	input logic CLK,
+	
+	// Avalon Reset Input
+	input logic RESET,
+	
+	// Avalon-MM Slave Signals
+	input  logic AVL_READ,					// Avalon-MM Read
+	input  logic AVL_WRITE,					// Avalon-MM Write
+	input  logic AVL_CS,					// Avalon-MM Chip Select
+	input  logic [3:0] AVL_BYTE_EN,			// Avalon-MM Byte Enable
+	input  logic [11:0] AVL_ADDR,			// Avalon-MM Address
+	input  logic [31:0] AVL_WRITEDATA,		// Avalon-MM Write Data
+	output logic [31:0] AVL_READDATA,		// Avalon-MM Read Data
+	
+	// Exported Conduit (mapped to VGA port - make sure you export in Platform Designer)
+	output logic [3:0]  red, green, blue,	// VGA color channels (mapped to output pins in top-level)
+	output logic hs, vs						// VGA HS/VS
+);
+
+
+//put other local variables here
+logic [10:0] addr;
+logic [7:0] curr_reg;
+logic [0:7] data;
+logic blank, sync;
+logic [9:0] DrawX, DrawY;
+logic pixel_clk;
+logic charX;
+
+//Declare submodules..e.g. VGA controller, ROMS, etc
+vga_controller vga_control (.Clk(CLK),.Reset(RESET),.hs(hs), .vs(vs),  .pixel_clk(pixel_clk),
+									 .blank(blank),     .sync(sync), .DrawX(DrawX),      .DrawY(DrawY)) ;  
+									 
+font_rom font_rom1(.addr(addr),.data(data) );
+
+logic [10:0] CHAR_ADDR; //Coming from drawX and drawY, which 32 bit register do we access
+logic [31:0] CHAR_DATA; //2 characters worth of data (32 bits) need to parse this to find the char code, colors, inv
+logic [15:0] curr_char; //16 bit character data
+
+logic [2:0] palette_reg_b; //Which reg for background
+logic [2:0] palette_reg_f; //Which reg for foreground
+logic palette_index_b;		//Upper/lower part of palette reg background
+logic pallete_index_f;		//Upper/lower part of palette reg foreground
+
+logic [31:0] AVL_READDATA1;
+logic [31:0] AVL_READDATA2;
+//Palette register
+logic [31:0] palette [8];
+
+always_ff @ (posedge CLK) begin
+	if (AVL_ADDR[11])begin
+		if(RESET)begin
+			for (int i=0;i<=7;i++)
+				begin
+					palette[i]<=32'h0;
+				end
+		end
+		
+		if (AVL_WRITE) begin
+			// Write each byte only if the corresponding byte enable is 1
+	//		palette[AVL_ADDR[2:0]][31:0]   <= AVL_WRITEDATA[31:0];
+			unique case(AVL_BYTE_EN)
+				4'b1111: palette[AVL_ADDR[2:0]][31:0]   <= AVL_WRITEDATA[31:0];
+				4'b1100: palette[AVL_ADDR[2:0]][31:16]   <= AVL_WRITEDATA[31:16];
+				4'b0011: palette[AVL_ADDR[2:0]][15:0]   <= AVL_WRITEDATA[15:0];
+				4'b1000: palette[AVL_ADDR[2:0]][31:24] <= AVL_WRITEDATA[31:24];
+				4'b0100: palette[AVL_ADDR[2:0]][23:16] <= AVL_WRITEDATA[23:16];
+				4'b0010: palette[AVL_ADDR[2:0]][15:8]  <= AVL_WRITEDATA[15:8];
+				4'b0001: palette[AVL_ADDR[2:0]][7:0]   <= AVL_WRITEDATA[7:0];
+				default: ;
+			endcase
+		end
+		
+		if (AVL_READ) begin
+			// Read
+				AVL_READDATA1[31:0] <=  palette[AVL_ADDR[2:0]];
+			
+		end
+	end
+end
+
+
+
+VRAM1	VRAM1_inst (
+	.address_a ( AVL_ADDR[10:0] ),
+	.address_b ( CHAR_ADDR ),
+	.byteena_a ( AVL_BYTE_EN ),
+	.clock ( CLK ),
+	.data_a ( AVL_WRITEDATA ),
+	.data_b ( 32'h0 ),
+	.rden_a ( AVL_READ ),
+	.rden_b ( 1'b1 ),
+	.wren_a ( AVL_WRITE && ~AVL_ADDR[11] ),
+	.wren_b ( 1'b0 ),
+	.q_a ( AVL_READDATA2 ),
+	.q_b ( CHAR_DATA )
+	);
+
+
+always_comb begin
+	if (AVL_READ) begin
+		unique case(AVL_ADDR[11])
+			1'b1: AVL_READDATA=AVL_READDATA1;
+			1'b0: AVL_READDATA=AVL_READDATA2;
+		endcase
+	end
+	else
+		AVL_READDATA=32'hZ;
+end
+
+//handle drawing (may either be combinational or sequential - or both).
+logic [6:0] regX;
+logic [6:0] regY;
+//
+assign regX=DrawX[9:4];  // divide by 16  
+assign regY=DrawY[9:4];  // divide by 16
+assign CHAR_ADDR=(regY*40)+regX;
+
+assign curr_char=CHAR_DATA[16*charX+:16];
+
+assign charX = DrawX[3]; // divide by 8, character width
+assign addr={curr_char[14:8], DrawY[3:0]};
+
+assign palette_reg_f=curr_char[7:5]; //Which of 8 palette registers
+assign palette_index_f = curr_char[4]; //Upper or lower part of palatte
+
+assign palette_reg_b=curr_char[3:1]; //Which of 8 palette registers
+assign palette_index_b=curr_char[0]; //Upper or lower part of palatte
+
+
+always_ff @ (posedge pixel_clk) begin
+	if (~blank)begin
+		red=4'h0;
+		blue=4'h0;
+		green=4'h0;
+	end
+	else if (blank) begin
+		if (~curr_char[15])begin //Non inverted
+			if (data[DrawX[2:0]])begin //If it is foreground
+				if (palette_index_f) begin //if in left part of palette
+					red <= palette[palette_reg_f][24:21];
+					green <= palette[palette_reg_f][20:17];
+					blue <= palette[palette_reg_f][16:13];
+				end
+				else begin //If in right part of palette
+					red <= palette[palette_reg_f][12:9];
+					green <= palette[palette_reg_f][8:5];
+					blue <= palette[palette_reg_f][4:1];
+				end
+			end
+			else begin //If background
+				if (palette_index_b) begin //if in left part of palette
+					red <= palette[palette_reg_b][24:21];
+					green <= palette[palette_reg_b][20:17];
+					blue <= palette[palette_reg_b][16:13];
+				end
+				else begin //If in right part of palette
+					red <= palette[palette_reg_b][12:9];
+					green <= palette[palette_reg_b][8:5];
+					blue <= palette[palette_reg_b][4:1];
+				end
+			end
+		end
+		else if(curr_char[15]) begin //Inverted
+			if (~data[DrawX[2:0]])begin //If it NOT is foreground
+				if (palette_index_f) begin //if in left part of palette
+					red <= palette[palette_reg_f][24:21];
+					green <= palette[palette_reg_f][20:17];
+					blue <= palette[palette_reg_f][16:13];
+				end
+				else begin //If in right part of palette
+					red <= palette[palette_reg_f][12:9];
+					green <= palette[palette_reg_f][8:5];
+					blue <= palette[palette_reg_f][4:1];
+				end
+			end
+			else begin //If background
+				if (palette_index_b) begin //if in left part of palette
+					red <= palette[palette_reg_b][24:21];
+					green <= palette[palette_reg_b][20:17];
+					blue <= palette[palette_reg_b][16:13];
+				end
+				else begin //If in right part of palette
+					red <= palette[palette_reg_b][12:9];
+					green <= palette[palette_reg_b][8:5];
+					blue <= palette[palette_reg_b][4:1];
+				end
+			end
+		end
+	end
+end
+endmodule

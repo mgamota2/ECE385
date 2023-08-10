@@ -87,7 +87,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : A16       :        :                   :         : 7         :                
 HEX1[4]                      : A17       : output : 2.5 V             :         : 7         : Y              
 HEX1[5]                      : A18       : output : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 7         :                
+Cout                         : A19       : output : 2.5 V             :         : 7         : N              
 HEX2[1]                      : A20       : output : 2.5 V             :         : 7         : Y              
 HEX2[3]                      : A21       : output : 2.5 V             :         : 6         : Y              
 GND                          : A22       : gnd    :                   :         :           :                

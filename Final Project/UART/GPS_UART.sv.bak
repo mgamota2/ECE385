@@ -1,0 +1,99 @@
+
+module GPS_UART (
+  input logic Clk,
+  input logic Reset, done, 
+  input logic [7:0] uart_rx,
+  output logic finished,
+  output logic [7:0] sentence [0:79], //Store 80 bytes of data
+  output logic [15:0] lat_min,
+  output logic [15:0] lon_min
+  
+);
+
+	logic [6:0] data_index;
+	logic start_found;
+
+  enum logic [1:0] {
+    WAIT_START,
+    READ_SENTENCE,
+    DONE
+  } curr_state, next_state;
+  
+//	initial begin
+//   for (int i = 0; i < 80; i++) begin
+//		sentence[i] = 8'b00000000;
+//	end
+//	end
+  
+  
+  always_ff @ (posedge Clk)
+		begin
+		curr_state = next_state;
+		if (Reset) begin
+			for (int i = 0; i < 80; i++) begin
+				sentence[i] = 8'b00000000;
+			end
+			 finished=1'b0;
+			 start_found = 1'b0;
+			 data_index = 1'b0;
+			 next_state <= WAIT_START;
+		end
+		
+		else begin
+			case (curr_state)
+			
+			WAIT_START: begin
+          if (uart_rx == 8'h24) begin //Look for the $ which signals the start of message
+            start_found <= 1'b1;
+            next_state <= READ_SENTENCE;
+            end
+			 else begin
+				for (int i = 0; i < 80; i++) begin
+				sentence[i] = 8'b00000000;
+				end
+				 finished=1'b0;
+				 start_found = 1'b0;
+				 data_index = 1'b0;
+				 next_state <= WAIT_START;
+				 end
+				 
+          end
+		  
+		  //This state is when the 
+        READ_SENTENCE: begin
+			if (done) begin
+				 if (uart_rx == "," || uart_rx == "*") begin
+					sentence[data_index] <= uart_rx;       //Put byte in sentence
+					data_index <= data_index + 1'b1;
+					next_state = READ_SENTENCE; 				//Stay in current state
+				 end
+				 else if (start_found && data_index < 80) begin
+					sentence[data_index] <= uart_rx;			//Put byte in sentence
+					data_index <= data_index + 1'b1;
+					next_state = READ_SENTENCE;				//Stay in current state
+				 end
+				 if (uart_rx == "*") begin //The next part of the message is the checksum
+					next_state <= DONE;
+				 end
+			 end
+			 else 
+				next_state <=READ_SENTENCE;
+			 
+        end
+		 DONE: begin
+			lon_min[15:8] <= sentence[14];
+			lon_min[7:0] <= sentence[15];
+			lat_min[15:8] <= sentence[27];
+			lat_min[7:0] <= sentence[28];
+			next_state = WAIT_START;
+			finished = 1'b1;
+		 end
+
+			 default: 
+					next_state = WAIT_START;
+
+	endcase
+	end
+	end
+		
+endmodule

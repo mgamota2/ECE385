@@ -9,12 +9,13 @@ module mult_toplevel  (input logic Clk, Reset_Load_Clear, Run,
 											HEX2, 
 											HEX3,
 											HEX4,
-											HEX5,
-						output logic [2:0] counter,
+											HEX5
+						//output logic [2:0] counter,
 						//output logic [7:0] A,
-						output logic Shift,
-						output logic add,
-						output logic sub
+						//output logic Shift,
+						//output logic add,
+						//output logic sub
+						
 											
 );
 
@@ -31,9 +32,9 @@ module mult_toplevel  (input logic Clk, Reset_Load_Clear, Run,
 		//Control unit
 		logic M;
 		logic Clr_Ld;
-		//logic Shift;
-		//logic add;
-		//logic sub;
+		logic Shift;
+		logic add;
+		logic sub;
 		
 		//Registers
 		
@@ -41,7 +42,7 @@ module mult_toplevel  (input logic Clk, Reset_Load_Clear, Run,
 		logic B_in;
 		
 		//Counter
-		//logic [3:0] counter;
+		logic [3:0] counter;
 		
 		//Adder
 		logic cout;
